@@ -1,69 +1,35 @@
-# React + TypeScript + Vite
+# MasterPOS - Frontend Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-Currently, two official plugins are available:
+Este repositorio contiene el cliente web (SPA) del sistema **MasterPOS**, una solución de Punto de Venta e Inventarios diseñada para la optimización de la gestión comercial en microempresas. Desarrollado como parte del proyecto de grado de Ingeniería de Sistemas de la UNAD.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías y Stack
 
-## Expanding the ESLint configuration
+El proyecto está construido con un stack moderno priorizando rendimiento, tipado estricto y experiencia de usuario:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Core:** React 19 + Vite 7.
+- **Lenguaje:** TypeScript 5.
+- **Estilos:** TailwindCSS 3 + Headless UI.
+- **Estado Global:** Zustand (Store ligero) + TanStack Query (Estado asíncrono).
+- **Formularios:** React Hook Form + Zod (Validación de esquemas).
+- **Enrutamiento:** React Router DOM 7.
+- **Cliente HTTP:** Axios.
+- **Iconografía:** Lucide React.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📋 Requisitos Previos
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Node.js v18 o superior.
+- NPM (incluido con Node) o PNPM.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Instalación y Despliegue Local
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Sigue estos pasos para ejecutar el proyecto en tu entorno local:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/fransteven/masterpos-frontend.git](https://github.com/fransteven/masterpos-frontend.git)
+   cd masterpos-frontend
